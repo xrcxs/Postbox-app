@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.aditya.postbox",
+        "sha256_cert_fingerprints": ["92:7D:A9:0F:65:16:6A:2D:79:57:F2:71:B1:A9:56:8B:4F:54:6C:DA:04:FF:EE:89:07:37:0C:DD:B3:C3:FC:62"]
+      }
+    }]

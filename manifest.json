@@ -1,0 +1,17 @@
+{
+  "name": "Postbox",
+  "short_name": "Postbox",
+  "description": "A simple pen-pal style chat app.",
+  "start_url": "/Postbox-app/",
+  "scope": "/Postbox-app/",
+  "display": "standalone",
+  "background_color": "#14162A",
+  "theme_color": "#E4A73B",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/561/561127.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+<title>Postbox</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="name-gate" id="nameGate">
+    <h2>✉ Postbox</h2>
+    <p>Pick a name, and a room code. Give your friend the <strong>same room code</strong> and you'll land in the same conversation.</p>
+    <input id="nameInputGate" placeholder="Your name" maxlength="20" />
+    <input id="roomInputGate" placeholder="Room code (e.g. amber-fox)" maxlength="30" />
+    <button id="enterBtn">Enter Postbox</button>
+  </div>
+
+  <div id="app" style="display:none;">
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="stamp-dot offline" id="statusDot"></span>
+        <div class="topbar-title">
+          <h1>Postbox</h1>
+          <p>writing as <strong id="peerName">You</strong></p>
+        </div>
+      </div>
+      <button class="room-pill" id="roomPill" title="Room code">room</button>
+    </header>
+
+    <main class="thread" id="thread">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-seal">✉</div>
+        <p>No letters yet.<br>Write the first one below.</p>
+      </div>
+    </main>
+
+    <footer class="composer">
+      <textarea id="messageInput" placeholder="Write a message…" rows="1" maxlength="1000"></textarea>
+      <button id="sendBtn" class="send-btn" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </footer>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
